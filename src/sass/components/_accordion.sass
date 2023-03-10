@@ -1,0 +1,63 @@
+
+/* Accordion */
+.accordion
+  &__body
+    display: grid
+    row-gap: .75rem
+    padding: 2rem 1rem
+    background: #fff
+    border-radius: .5rem
+    box-shadow: 0 1.2rem  3.2rem hsla(0, 0%, 20%, 0.1)
+  &__item
+    box-shadow: 0 .2rem .6rem hsla(0, 0%, 15%, 0.1)
+    background: #333
+    border-radius: .25rem
+    position: relative
+    transition: all .25s ease
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    column-gap: .5rem
+    padding: 1.25rem 1.25rem 1.25rem 1rem
+    cursor: pointer
+  &__icon
+    font-size: 1.5rem
+    height: max-content
+    color: #fff
+    transition: .3s
+  &__title 
+    font-size: 2rem
+    color: #fff
+    font-weight: 400
+    margin-top: .15rem
+    transition: .2s
+  &__content
+    overflow: hidden
+    height: 0
+    transition: all .25s ease
+  &__description 
+    padding: 2rem 1.5rem
+    font-size: 1.6rem
+
+/* rotate icon */
+.accordion-open .accordion__icon 
+  transform: rotate(45deg)
+
+/* media queries */
+@media screen and (min-width: 576px)
+  .accordion
+    &__body
+      width: 550px
+      padding: 2.5rem
+      justify-self: center
+      border-radius: .75rem
+    &__header
+      padding: 1.5rem
+    &__title
+      padding-right: 3.5rem
+
+@media screen and (min-width: 968px)
+  .accordion__body
+    width: 968px

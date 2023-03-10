@@ -1,0 +1,28 @@
+.hosting
+  &__container
+    padding: 4rem $containerSidePadding
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include respond(tablet)
+      flex-wrap: wrap
+  &__content 
+    width: 48%
+    @include respond(tablet)
+      width: 100%
+      margin-bottom: 4rem
+  &__brends
+    width: 50%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 8rem
+    @include respond(tablet)
+      width: 100%
+  &__brends-img
+    width: 14.5rem
+    height: 5rem
+    & img
+      max-width: 100%
+      height: auto
+      object-fit: cover

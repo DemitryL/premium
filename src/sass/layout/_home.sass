@@ -1,0 +1,53 @@
+.home 
+  &__container
+    padding: 4rem 1.5rem 
+    display: flex
+    justify-content: center
+    gap: 4%
+    @include respond(tablet)
+      flex-wrap: wrap
+    @include respond(lp-desktop)
+      gap: .5rem
+
+.btn-home
+  margin-right: 2.4rem
+
+.btn-home__light
+  color: $colorBlack
+  background: none
+  box-shadow: none
+  border-radius: .8rem
+  border: 1px solid $colorBlack
+
+
+.home__block-img
+  position: relative
+  width: 50rem
+  height: 50rem
+  @include respond(lp-desktop)
+    width: 40rem
+    height: 40rem
+  & img 
+    width: 100%
+    height: auto
+    padding-top: 2rem
+    object-fit: cover
+  & span, &::before, &::after
+    content: ''
+    position: absolute
+    display: inline-block
+  & span
+    top: 8.3rem
+    right: -2.5rem
+    border-top: 4rem solid transparent
+    border-right: 4rem solid $mainColor
+  &::before
+    bottom: 2rem
+    right: -3.5rem
+    border-top: 7.2rem solid transparent
+    border-right: 7.2rem solid $mainColor
+  &::after
+    left: -3rem
+    bottom: 14rem
+    border-top: 4rem solid transparent
+    border-left: 4rem solid $mainColor

@@ -1,0 +1,26 @@
+//@mixin l-h ($val, $fon)
+//  line-height: math.round(calc($val / $fon * 100%))
+
+
+  
+/* Site adaptive */
+@mixin respond($breakpoint)
+  @if $breakpoint == phone
+    @media only screen and (max-width: $breakpoint480)
+      @content
+
+  @if $breakpoint == tablet
+    @media only screen and (max-width: $breakpoint768)
+      @content
+  
+  @if $breakpoint == lp-desktop
+    @media only screen and (max-width: $breakpoint992)
+      @content
+
+  @if $breakpoint == desktop
+    @media only screen and (max-width: $breakpoint1200)
+      @content
+
+  @if $breakpoint == big-screen
+    @media only screen and (min-width: $breakpoint1450)
+      @content

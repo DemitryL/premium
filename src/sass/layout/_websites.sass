@@ -1,0 +1,31 @@
+.websites
+  &__container
+    padding: 7rem $containerSidePadding 10.5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include respond(tablet)
+      flex-wrap: wrap
+  &__content 
+    width: 44.5rem
+    @include respond(tablet)
+      width: 100%
+      margin-bottom: 4rem
+  &__brends
+    width: 44%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 8rem
+    @include respond(tablet)
+      width: 100%
+  &__brends-img
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 12rem
+    height: 6.6rem
+    & img
+      max-width: 100%
+      height: auto
+      object-fit: cover

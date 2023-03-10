@@ -1,0 +1,43 @@
+.contact
+  &__container
+    position: relative
+    padding: 8rem 1.5rem 8.8rem
+    background: #F7FAFE
+    border-radius: 1.6rem
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 10rem
+    &::before, 
+    &::after
+      content: ''
+      position: absolute
+      display: inline-block
+    &::before
+      left: -1.5rem
+      bottom: 9.2rem
+      border-top: 4rem solid transparent
+      border-left: 4rem solid $mainColor
+    &::after
+      bottom: 4rem
+      right: -2.5rem
+      border-top: 7.2rem solid transparent
+      border-right: 7.2rem solid $mainColor
+  &__body
+    position: relative
+    text-align: center
+    &::before 
+      content: ''
+      position: absolute
+      display: inline-block
+      top: -8rem
+      left: 20.4rem
+      border-top: 4rem solid transparent
+      border-right: 4rem solid $mainColor
+  &__title
+    font-family: 'Poppins'
+    font-weight: 600
+    font-size: 6.4rem
+    line-height: 138%
+    color: #2E2E2E
+    margin-bottom: 4.5rem

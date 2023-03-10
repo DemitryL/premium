@@ -1,0 +1,108 @@
+.header
+  top: 0
+  left: 0
+  width: 100%
+  background: $colorWhite
+  transition: .3s
+  z-index: $z-fixed 
+  &__container
+    min-height: $headerHeight
+    padding: 4rem $containerSidePadding
+    display: flex
+    justify-content: space-between
+    align-items: center
+    @include respond(tablet)
+      padding: 0 $containerSidePadding
+  &__logo 
+    position: relative
+    display: inline-block
+    width: 9rem
+    z-index: 5
+    margin-right: 6.5rem
+    & img 
+      width: 100%
+      height: auto
+      padding: 0.1rem
+      object-fit: cover
+  &__login
+    @include respond(tablet)
+      display: flex
+      justify-content: center
+      align-items: center
+
+.login-header
+  padding-right: 3rem
+  border-right: 1px solid #DAD8D8
+  font-family: 'Poppins'
+  font-weight: 600
+  font-size: 1.5rem
+  line-height: 22px
+  color: $colorBlack
+  &:hover 
+    color: $mainColor
+
+.login-phone 
+  font-family: 'Poppins'
+  font-weight: 600
+  font-size: 1.6rem
+  line-height: 15px
+  color: $colorBlack
+  &:hover 
+    color: $mainColor
+  @include respond(tablet)
+    display: none
+
+.login-icon
+  padding: .5rem
+  font-size: 2rem
+  margin-left: 3rem
+  color: $mainColor
+  transform: translateY(2px)
+  transition: .3s
+  &:hover
+    background: $mainColor
+    border-radius: 50%
+    color: $colorWhite
+  @include respond(tablet)
+    transform: translateY(0)
+    margin: 0 2rem
+
+
+
+/* === change background header === */
+.scroll-header
+  position: fixed
+  background-color: $colorBlack
+  box-shadow: 0 2px 4px rgba(0,0,0,.1)
+  & .header__container
+    padding: 0 $containerSidePadding
+
+
+.scroll-header .menu__link, 
+.scroll-header .header__login .login-header, 
+.scroll-header .header__login .login-phone
+  color: $colorWhite
+
+.scroll-header .menu__link:hover, 
+.scroll-header .header__login .login-header:hover, 
+.scroll-header .header__login .login-phone:hover
+  color: $mainColor
+
+
+.scroll-header .menu__body
+  background-color: $colorBlack
+  z-index: $z-fixed
+
+.scroll-header .menu__burger span,
+.scroll-header .menu__burger span::before,
+.scroll-header .menu__burger span::after
+  background-color: $colorWhite
+
+.scroll-header .menu__burger.burger-active span
+  background-color: transparent
+
+/* ===  header hide === */
+.header.hide 
+  transform: translateY(-80%)
+  &:hover
+    transform: translateY(0%)
